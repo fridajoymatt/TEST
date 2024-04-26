@@ -26,7 +26,7 @@ Route::get('/welcome', function () {
 // <//////////////////////////////////////////////
 
 
-    Route::match(['get', 'post'], '/step1/{offre?}/igor',[
+    Route::match(['get', 'post'], '/step1/{offre?}/firdaous',[
         "as" => "step1",
         "uses" => "PostulerController@step1"
     ]);
@@ -36,7 +36,7 @@ Route::get('/welcome', function () {
         "uses" => "PostulerController@step2"
     ]);
 
-        Route::match(['get', 'post'], '/step3/{offre?}',[
+        Route::match(['get', 'post'], '/step3/{firdaous?}',[
         "as" => "step3",
         "uses" => "PostulerController@step3"
     ]);
