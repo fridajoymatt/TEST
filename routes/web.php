@@ -25,38 +25,6 @@ Route::get('/welcome', function () {
 
 // <//////////////////////////////////////////////
 
-Route::group(["namespace"=>"App\Http\Controllers\FrontOffice"],function(){
-
-    Route::get('/',[
-        "as" => "home",
-        "uses" => "HomeController@index"
-    ]);
-
-    Route::match(['get', 'post'], '/faqs',[
-        "as" => "faqs",
-        "uses" => "HomeController@faqs"
-    ]);
-
-    Route::match(['get', 'post'], '/contact',[
-        "as" => "contact",
-        "uses" => "HomeController@contact"
-    ]);
-
-    Route::match(['get', 'post'], '/form-contact',[
-        "as" => "form-contact",
-        "uses" => "ContactController@send"
-    ]);
-
-
-    Route::match(['get', 'post'], '/index_offre',[
-        "as" => "index_offre",
-        "uses" => "HomeController@index_offre"
-    ]);
-
-    Route::match(['get', 'post'], '/postuler/{offre?}',[
-        "as" => "postuler",
-        "uses" => "HomeController@postuler"
-    ]);
 
     Route::match(['get', 'post'], '/step1/{offre?}',[
         "as" => "step1",
